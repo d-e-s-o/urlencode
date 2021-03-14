@@ -1,0 +1,22 @@
+#!/usr/bin/python
+
+# Copyright (C) 2021 Daniel Mueller <deso@posteo.net>
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+from urllib.parse import (
+  unquote_plus,
+)
+from sys import (
+  argv,
+  exit,
+)
+
+def main(args):
+  """URL-decode all arguments passed to the program."""
+  for arg in args:
+    print(unquote_plus(arg))
+  return 0
+
+
+if __name__ == "__main__":
+  exit(main(argv[1:]))
